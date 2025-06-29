@@ -1,0 +1,16 @@
+# LangChain plumbing
+pip install "langchain-core>=0.2" langchain-community
+
+# local embeddings + vector store
+pip install sentence-transformers faiss-cpu
+
+# Kaggle CLI to fetch the dataset
+pip install kaggle                   # requires an API token
+
+# pick ONE Llama runtime (A or B) ───────────────────────────
+# A) zero-setup daemon
+curl -fsSL https://ollama.com/install.sh | sh
+ollama pull llama3:8b                # 4 GB quantised model
+
+# B) pure-Python wheels (CPU/GPU)
+# pip install "llama-cpp-python[server]"
