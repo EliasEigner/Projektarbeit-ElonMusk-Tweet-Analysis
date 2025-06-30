@@ -1,16 +1,32 @@
-# LangChain plumbing
-pip install "langchain-core>=0.2" langchain-community
+# Data processing and analysis
+pandas>=1.5.0
+numpy>=1.21.0
 
-# local embeddings + vector store
-pip install sentence-transformers faiss-cpu
+# Visualization
+matplotlib>=3.5.0
+plotly>=5.10.0
+missingno>=0.5.1
+wordcloud>=1.9.0
 
-# Kaggle CLI to fetch the dataset
-pip install kaggle                   # requires an API token
+# Natural Language Processing
+nltk>=3.7
+scikit-learn>=1.1.0
 
-# pick ONE Llama runtime (A or B) ───────────────────────────
-# A) zero-setup daemon
-curl -fsSL https://ollama.com/install.sh | sh
-ollama pull llama3:8b                # 4 GB quantised model
+# LangChain and related packages
+langchain>=0.0.350
+langchain-community>=0.0.10
+faiss-cpu>=1.7.0
+sentence-transformers>=2.2.0
 
-# B) pure-Python wheels (CPU/GPU)
-# pip install "llama-cpp-python[server]"
+# Local LLM support (Ollama)
+ollama>=0.1.0
+
+# Progress bars
+tqdm>=4.64.0
+
+# Jupyter notebook support
+jupyter>=1.0.0
+ipykernel>=6.15.0
+
+# nltk data needs to be installed see notebook section tfidf
+# gemma3:4b must be pulled locally, or use another model and modify the code
